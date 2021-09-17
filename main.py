@@ -7,7 +7,8 @@ from moviepy.editor import VideoFileClip
 logging.basicConfig(level=logging.INFO)
 
 model = keras.models.load_model('models/model.h5')
-print(model)
+#print(model)
+print([layer.name in layer in model.layers])
 
 class Lanes():
     def __init__(self):
