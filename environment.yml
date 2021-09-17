@@ -1,0 +1,11 @@
+name: lane_det
+channels:
+    - https://conda.anaconda.org/menpo
+    - conda-forge
+dependencies:
+    - numpy
+    - opencv3
+    - pip:
+        - tensorflow
+        - keras
+        - moviepy
