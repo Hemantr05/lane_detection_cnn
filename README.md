@@ -9,6 +9,10 @@ It can be used by autonomous cars for scene understanding. For example, infering
 
 `pip install -r requirements.txt`
 
+or 
+
+`conda env create -f environment.yml`
+
 **Demo:**
 
 `python main.py --i 'media/lane_video.mp4' --o 'media/lane_output_video.mp4'`
