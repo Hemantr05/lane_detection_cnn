@@ -7,6 +7,7 @@ from moviepy.editor import VideoFileClip
 logging.basicConfig(level=logging.INFO)
 
 model = keras.models.load_model('models/model.h5')
+print(model)
 
 class Lanes():
     def __init__(self):
@@ -55,6 +56,6 @@ if __name__ == '__main__':
     lanes = Lanes()
 
     video_clip = vid_input.fl_image(road_lines)
-    video_clip.write_videofile(vid_output)
+    video_clip.write_videofile(vid_output, audio=False)
     logging.info("Lanes predicted successfully!")
     print(f"Find output video in {vid_output}")
