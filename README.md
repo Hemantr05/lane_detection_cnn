@@ -1,4 +1,4 @@
-# Lane detection w/ Semnatic Segmentation
+# Lane detection w/ Semantic Segmentation
 
 The goal of this project is to perform semantic segmentation on images to label pixels of a road using a 
 Fully Convolutional Network. Semantic segmentation is the task of finding what's in an image at the pixel level. 
