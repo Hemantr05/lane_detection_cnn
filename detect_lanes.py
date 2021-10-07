@@ -39,6 +39,18 @@ def road_lines(image):
 
     return result
 
+def predict(input_video, output_video):
+    vid_input = VideoFlipClip(input_video)
+    logging.info("Video loaded successfully")
+    vid_output = output_video
+    
+    lanes = Lanes()
+    
+    video_clip = vid_input.fl_image(road_lines)
+    video_clip.write_videofile(vid_ouput, audio=False)
+    logging.info("Lanes predicted successfully")
+    print(f"Output video in {vid_output}")
+
 if __name__ == '__main__':
     import argparse
 
@@ -50,13 +62,4 @@ if __name__ == '__main__':
     # vid_input = VideoFileClip("media/lanes_clip.mp4")
     # vid_output = 'media/lanes_output_clip.mp4'
 
-    vid_input = VideoFileClip(args.input_video)
-    logging.info("Video loaded successfully!")
-    vid_output = args.output_video
-
-    lanes = Lanes()
-
-    video_clip = vid_input.fl_image(road_lines)
-    video_clip.write_videofile(vid_output, audio=False)
-    logging.info("Lanes predicted successfully!")
-    print(f"Find output video in {vid_output}")
+    predict(args.input_video, args.output_video)
